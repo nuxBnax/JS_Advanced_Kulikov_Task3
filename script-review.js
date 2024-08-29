@@ -74,12 +74,10 @@ function deleteReview() {
         }   
 
         for (let i = 0; i < getDataLS.length; i++) {
-            // console.log(productTitle == getDataLS[i].title && getDataLS[i].review.length == 1);
             if (productTitle == getDataLS[i].title && getDataLS[i].review.length == 1) {
                 
                 getDataLS.splice(i, 1);
-            } 
-            // console.log(productTitle == getDataLS[i].title && getDataLS[i].review.length > 1);        
+            }       
             else if (productTitle == getDataLS[i].title && getDataLS[i].review.length > 1) {
                 for (let j = 0; j < getDataLS[i].review.length; j++) {
                     if (getDataLS[i].review[j].id == reviewId) {

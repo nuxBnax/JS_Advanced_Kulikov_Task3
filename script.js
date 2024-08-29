@@ -72,51 +72,6 @@ addDataToLocalStorage(products);
 // запись в локальное хранилище последнего id из всех комментариев
 LastReviewId();
 
-// function renderProduts(staff) {
-
-//     const containerReviewEl = document.querySelector('.container-review');
-
-//     staff.forEach(item => {
-//         containerReviewEl.insertAdjacentHTML('beforeend', ` 
-//     <div class="block">
-//         <details class="review" >
-//             <summary class="title">${item.title}
-//                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-//                     <path
-//                      d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" />
-//                 </svg>
-//             </summary>
-//             <ul class="list" data-title="${item.title}">
-//             </ul>
-//         </details>
-//         <div class="line"></div>
-//     </div>
-//      `)
-//     }
-//     )
-// }
-// renderProduts(products);
-
-// function renderReviews(key) {
-//     const listEls = document.querySelectorAll('.list');
-//     let getDataLS = JSON.parse(localStorage.getItem(key));
-//     getDataLS.forEach(data => {
-//         listEls.forEach(el => {
-//             for (let i = 0; i < data.review.length; i++) {
-//                 const title = el.getAttribute("data-title");
-//                 if (title == data.title) {
-//                     el.insertAdjacentHTML('beforeend', `
-//                     <li data-id="${data.review[i].id}" style="border: 2px solid ${getRandomColor()}">
-//                         <p class="reviewText"> ${data.review[i].text}</p>
-//                         <button class="delete-btn">Удалить отзыв</button>
-//                     </li>
-//                     `)
-//                 }
-//             }
-//         })
-//     });
-// }
-
 // функция записи новых данных в локальное хранилище
 
 function setNewReview() {
@@ -185,11 +140,3 @@ if (localStorage.getItem('last')) {
     addNewReview();
     localStorage.removeItem('last');
 }
-
-
-// if (localStorage.getItem('newData')) {
-//     renderReviews('newData')
-// }
-// else {
-//     renderReviews('data');
-// }
